@@ -7,6 +7,6 @@ class ExampleService {
     SimpMessagingTemplate brokerMessagingTemplate
 
     void hello() {
-        brokerMessagingTemplate.convertAndSend "/topic/hello", "hello from service!"
+        brokerMessagingTemplate.convertAndSend "/topic/hello", "Hello from service!"
     }
 }

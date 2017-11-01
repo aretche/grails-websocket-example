@@ -9,7 +9,7 @@ class ExampleController {
 
     @MessageMapping("/hello")
     @SendTo("/topic/hello")
-    protected String hello(String world) {
-        return "hello from controller, ${world}!"
+    protected String hello(String text) {
+        return "${text}"
     }
 }

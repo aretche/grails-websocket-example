@@ -10,7 +10,6 @@
         $(function() {
             var socket = new SockJS("${createLink(uri: '/stomp')}");
             var client = Stomp.over(socket);
-
             client.connect({}, function() {
                 client.subscribe("/topic/hello", function(message) {
                     $("#helloDiv").append(message.body);
@@ -18,7 +17,7 @@
             });
 
             $("#helloButton").click(function() {
-                client.send("/app/hello", {}, JSON.stringify("world"));
+                client.send("/app/hello", {}, JSON.stringify("Hello from controller!!! "));
             });
         });
     </script>
